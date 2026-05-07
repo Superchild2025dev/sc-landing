@@ -488,7 +488,7 @@ html {
 .s3-badge {
   width: clamp(28px, 6vw, 50px);
   left: 5%;
-  top: 34%;
+  top: 48%;
   animation: s3Float1 3s ease-in-out infinite;
 }
 .s3-heart {
@@ -616,7 +616,7 @@ html {
 }
 .s4-b1 { left: 2%; top: 5%; }
 .s4-b2 { right: 2%; top: 15%; }
-.s4-b3 { left: 20%; top: 45%; }
+.s4-b3 { left: 35%; top: 45%; }
 .s4-b4 { right: 10%; top: 55%; }
 .s4-b5 { left: 5%; bottom: 5%; }
 
@@ -654,13 +654,22 @@ html {
   letter-spacing: -0.05em;
   color: #0c52af;
   text-align: center;
-  margin-top: 40pt;
+  margin-top: 80pt;
+}
+
+.s4-learn-img {
+  margin-top: 50pt;
+  animation: learnGlow 2.5s ease-in-out infinite;
+}
+@keyframes learnGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.15) drop-shadow(0 0 8px rgba(12, 82, 175, 0.3)); }
 }
 
 .s4-bottom-text {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-weight: 600;
-  font-size: clamp(5pt, 1.5vw, 12pt);
+  font-size: 3.5vw;
   letter-spacing: -0.05em;
   color: #a5a5a5;
   line-height: 1.5;
@@ -829,13 +838,74 @@ html {
 .s5-step-desc {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-weight: 500;
-  font-size: clamp(6pt, 1.9vw, 10pt);
+  font-size: 3.5vw;
   letter-spacing: -0.03em;
   color: #666;
   line-height: 1.6;
   margin-top: 10pt;
   text-align: left;
 }
+
+/* 섹션5 장식요소 */
+.s5-deco {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.s5-deco-baby {
+  width: clamp(60px, 20vw, 120px);
+  right: 3%;
+  top: 36%;
+  animation: s5Float1 3s ease-in-out infinite;
+}
+.s5-deco-bubble {
+  width: clamp(35px, 12vw, 70px);
+  right: 8%;
+  top: 53%;
+  animation: s5Float2 2.8s ease-in-out infinite;
+}
+.s5-deco-boy {
+  width: clamp(40px, 13vw, 75px);
+  right: 3%;
+  top: 62%;
+  animation: s5Float3 3.2s ease-in-out infinite;
+}
+.s5-deco-heart {
+  width: clamp(25px, 8vw, 45px);
+  right: 8%;
+  top: 55%;
+  animation: s5Float1 2.5s ease-in-out infinite 0.5s;
+}
+.s5-deco-circle {
+  width: clamp(30px, 10vw, 55px);
+  right: 5%;
+  top: 78%;
+  animation: s5Float2 3.5s ease-in-out infinite;
+}
+@keyframes s5Float1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(3deg); }
+}
+@keyframes s5Float2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-4deg); }
+}
+@keyframes s5Float3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* 장식 순차 등장 */
+.s5-deco {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.section5-steps.visible .s5-deco-baby { opacity: 1; transform: scale(1); transition-delay: 0.3s; }
+.section5-steps.visible .s5-deco-bubble { opacity: 1; transform: scale(1); transition-delay: 0.8s; }
+.section5-steps.visible .s5-deco-boy { opacity: 1; transform: scale(1); transition-delay: 1.0s; }
+.section5-steps.visible .s5-deco-heart { opacity: 1; transform: scale(1); transition-delay: 1.2s; }
+.section5-steps.visible .s5-deco-circle { opacity: 1; transform: scale(1); transition-delay: 1.5s; }
 
 /* 섹션5 애니메이션 */
 .s5-title {
