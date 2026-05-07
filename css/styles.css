@@ -785,7 +785,7 @@ html {
 /* 섹션5: 체험 수업부터 */
 .section5-steps {
   padding: 60pt 10% 40pt;
-  margin: 0;
+  margin: 0 -5.5%;
   background: url('../assets/section 5/bg.png') no-repeat center top;
   background-size: cover;
   overflow: hidden;
