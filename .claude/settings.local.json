@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffmpeg -version)",
+      "Bash(find . -name \"*.webp\" -exec ls -lh {} \\\\;)",
+      "Bash(sort -k2)",
+      "Bash(ffmpeg -y -i 4.jpg -vf \"scale=min\\(1200\\\\,iw\\):min\\(1200\\\\,ih\\):force_original_aspect_ratio=decrease\" -q:v 70 4.webp)",
+      "Bash(ffmpeg -y -i 6.png -vf \"scale=min\\(1200\\\\,iw\\):min\\(1200\\\\,ih\\):force_original_aspect_ratio=decrease\" -q:v 70 6.webp)",
+      "Bash(ls -lh \"/c/SC LANDING/images/facility/ga/pool2\"*)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/images/facility/ga/locker.jpg\" -vf \"scale=min\\(1200\\\\,iw\\):min\\(1200\\\\,ih\\):force_original_aspect_ratio=decrease\" -q:v 70 \"/c/SC LANDING/images/facility/ga/locker.webp\")",
+      "Bash(node create-docx.js)",
+      "Bash(mkdir -p \"/c/SC LANDING/디자이너 전달/tmp\")",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "WebSearch",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 \"/c/SC LANDING/sclanding.png\")",
+      "Bash(mkdir -p \"/c/SC LANDING/design/sections\")",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:3000:0:0\" 01_hero.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:3000:0:3000\" 02_about1.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:3000:0:6000\" 03_about2.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:3000:0:9000\" 04_about3.png)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,codec_name -of csv=s=,:p=0 \"/c/SC LANDING/assets/hero/hero 배경.mp4\")",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:1800:0:0\" hero_close.png)",
+      "Bash(curl -sI \"https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css\")",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:1600:0:800\" empathy_full.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:800:0:2250\" section2_top.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:1800:0:3600\" section3.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:2500:0:10500\" step_section.png)"
+    ]
+  }
+}
