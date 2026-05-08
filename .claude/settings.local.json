@@ -27,7 +27,15 @@
       "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:1800:0:3600\" section3.png)",
       "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:2500:0:10500\" step_section.png)",
       "Bash(ffmpeg -y -i \"/c/SC LANDING/assets/새 폴더/섹션 7 시간표.png\" -vf \"crop=iw:ih/2:0:0\" s7_top.png)",
-      "Bash(ffmpeg -y -i \"/c/SC LANDING/assets/새 폴더/섹션 7 시간표.png\" -vf \"crop=iw:ih/2:0:ih/2\" s7_bottom.png)"
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/assets/새 폴더/섹션 7 시간표.png\" -vf \"crop=iw:ih/2:0:ih/2\" s7_bottom.png)",
+      "Bash(rm -f \"landing png.jpg\" sclanding.png)",
+      "Bash(rm -rf \"디자이너 전달\" design \"디자인 에셋\")",
+      "Bash(rm -f \"assets/section 4/제목 없음-2.png\")",
+      "Bash(rm -f \"assets/새 폴더/섹션 7 시간표.png\" \"assets/새 폴더/용암점.png\")",
+      "Bash(rm -f \"텍스트_원고.txt\")",
+      "Bash(rm -rf \"hero\" \"navigation bar\" \"section 1\" \"section 2\" \"section 3\" \"section 4\" \"section 5\" \"section 6\" \"section 7\" \"section 8\" \"section 9\" \"새 폴더\")",
+      "Bash(mv hero-temp *)",
+      "Bash(cd \"/c/SC LANDING\" && du -sh assets/ images/ && echo \"---\" && find . -path ./node_modules -prune -o -path \"./.git\" -prune -o -type f -print | wc -l)"
     ]
   }
 }

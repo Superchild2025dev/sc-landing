@@ -294,8 +294,10 @@ function syncAlbumTabs(branch) {
 function switchFacility(branch, btn) {
   document.querySelectorAll('.sf-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.sf-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.sf-info-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('sf-' + branch).classList.add('active');
+  document.getElementById('sf-info-' + branch).classList.add('active');
 }
 
 /* ─── 섹션7 시간표 탭 ─── */
@@ -305,11 +307,11 @@ function switchS7(branch) {
   var left = document.getElementById('s7-btn-left');
   var right = document.getElementById('s7-btn-right');
   if (branch === 'ga') {
-    left.src = 'assets/새 폴더/btn_ga_active.png';
-    right.src = 'assets/새 폴더/btn_ga_inactive.png';
+    left.src = 'assets/s7/btn-ga-on.png';
+    right.src = 'assets/s7/btn-ga-off.png';
   } else {
-    left.src = 'assets/새 폴더/btn_yo_inactive.png';
-    right.src = 'assets/새 폴더/btn_yo_active.png';
+    left.src = 'assets/s7/btn-yo-off.png';
+    right.src = 'assets/s7/btn-yo-on.png';
   }
 }
 
