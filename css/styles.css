@@ -958,7 +958,7 @@ body {
 
 /* 섹션7: 수업시간·반 구성 */
 .section7 {
-  padding: 40px 0 40px;
+  padding: 40px 0 80px;
   background: #fff;
   margin: 0 -5.5%;
   position: relative;
@@ -1033,7 +1033,7 @@ body {
 /* 섹션8: 수강료 */
 .section8 {
   position: relative;
-  padding: 40px 0;
+  padding: 40px 0 80px;
   overflow: visible;
   margin-top: 80px;
 }
@@ -1080,7 +1080,7 @@ body {
 
 .s6-confidence {
   margin: 0;
-  padding: 7.5px 5.5% 0;
+  padding: 7.5px 5.5% 80px;
 }
 .s6-confidence-img {
   width: 100%;
@@ -1090,8 +1090,8 @@ body {
 /* 섹션9: 친구추천 이벤트 */
 .section9 {
   background: #eaeef0;
-  padding: 40px 10.5%;
-  margin: 60px -5.5% 0;
+  padding: 40px 10.5% 80px;
+  margin: 0 -5.5% 0;
 }
 .s9-block {
   margin-bottom: 50px;
@@ -1124,7 +1124,7 @@ body {
 
 /* 섹션10: 셔틀안내 */
 .section10 {
-  padding: 40px 5.5%;
+  padding: 40px 5.5% 80px;
 }
 .s10-title {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
@@ -1852,7 +1852,7 @@ tr:last-child td { border: none; }
 
 /* ═══ 시설 · 주차 · 위치 ═══ */
 .section-facility {
-  padding: 60px 5.5%;
+  padding: 60px 5.5% 80px;
   background: #fff;
 }
 .sf-title, .sf-desc, .sf-badges {
