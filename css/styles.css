@@ -936,10 +936,9 @@ body {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-weight: 400;
   font-size: 9vw;
-  margin-bottom: 3px;
   color: #fff;
   letter-spacing: -0.05em;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 .s6-desc {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
@@ -954,7 +953,7 @@ body {
   position: absolute;
   left: 10.5%;
   right: 10.5%;
-  bottom: 20px;
+  bottom: 15px;
   width: 79%;
 }
 
@@ -1182,10 +1181,10 @@ body {
   background: #fff;
 }
 .sf-title, .sf-desc, .sf-badges {
-  padding-left: 5%;
-  margin-left: 5.5%;
+  padding-left: 0;
+  margin-left: 0;
 }
-.sf-inner { max-width: 800px; margin: 0 auto; }
+.sf-inner { max-width: 100%; }
 .sf-title {
   font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-weight: 400;
