@@ -161,8 +161,6 @@
         <img src="assets/section 5/수영애기.png" alt="" class="s5-deco s5-deco-baby">
         <img src="assets/section 5/말풍선.png" alt="" class="s5-deco s5-deco-bubble">
         <img src="assets/section 5/남자머리.png" alt="" class="s5-deco s5-deco-boy">
-        <img src="assets/section 5/하투.png" alt="" class="s5-deco s5-deco-heart">
-        <img src="assets/section 5/동그라미.png" alt="" class="s5-deco s5-deco-circle">
         <h3 class="s5-title">체험 수업부터,<br>등록, 등원까지 한 번에</h3>
 
         <div class="s5-step">
@@ -175,268 +173,87 @@
           <p class="s5-step-desc">아이가 잘 적응할 수 있게 담당 선생님께서<br>직접 상담과 수업을 진행해요.</p>
         </div>
 
-        <div class="s5-step">
+        <div class="s5-step" style="position:relative;">
           <h4 class="s5-step-title"><span class="s5-num">3</span>올케어 시스템으로<br>편하게 보내세요.</h4>
+          <img src="assets/section 5/하투.png" alt="" class="s5-deco s5-deco-heart">
           <p class="s5-step-desc">셔틀 차량, 수업, 환복, 샤워, 로션 바르기까지.<br>매월 수업 영상도 보내드려요.</p>
         </div>
       </div>
 
-      <!-- 후기 (실제 리뷰 이미지) -->
-      <div class="story-block story-success reveal">
-        <h3>먼저 경험한 부모님들의 이야기</h3>
-        <div class="review-images">
-          <img src="images/review/review1.webp" alt="학부모 후기 1" class="review-img">
-          <img src="images/review/review2.webp" alt="학부모 후기 2" class="review-img">
-          <img src="images/review/review3.webp" alt="학부모 후기 3" class="review-img">
-        </div>
-      </div>
-
-      <div class="story-connector"><div class="line"></div></div>
-
-      <!-- 변화 (실제 사진 갤러리) -->
-      <div class="story-block story-transform reveal">
-        <h3>슈퍼차일드와 함께 한다면</h3>
-        <p style="text-align:center;color:rgba(255,255,255,0.85);margin-bottom:20px;">수영이 제일 좋다고 말하는, 자신감 넘치는 아이가 될 수 있어요</p>
-        <div class="change-gallery">
-          <img src="images/change/1.webp" alt="수영 대회 응원">
-          <img src="images/change/2.webp" alt="수영 훈련">
-          <img src="images/change/3.webp" alt="바다 스노클링">
-          <img src="images/change/4.webp" alt="수영장에서 자유롭게">
-          <img src="images/change/5.webp" alt="대회 응원">
-          <img src="images/change/6.webp" alt="수영 대회 참가">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ SCHEDULE ═══ -->
-<section class="section section-alt" id="schedule">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Schedule & Classes</div>
-      <h2 class="section-title">수업시간 · 반 구성</h2>
-      <p class="section-desc">아이의 연령과 수준에 맞는 수업 시간을 확인하세요</p>
-    </div>
-
-    <!-- 통합 시간표 -->
-    <div class="timetable-unified reveal">
-      <div class="timetable-unified-header">🕐 수업 시간표</div>
-      <div class="tt-legend">
-        <div class="tt-legend-item"><span class="tt-legend-dot gen"></span> 일반부 (초등 1학년~)</div>
-        <div class="tt-legend-item"><span class="tt-legend-dot inf"></span> 유아부 (만 3~4세 이상, 100cm↑)</div>
-      </div>
-      <div class="tt-filter-row">
-        <div class="tt-filter-group">
-          <button class="tt-filter-btn active-branch" onclick="switchUnified('ga', null, this)">가경점</button>
-          <button class="tt-filter-btn" onclick="switchUnified('yo', null, this)">용암점</button>
-        </div>
-      </div>
-      <div class="tt-day-row">
-        <div class="tt-day-seg">
-          <button class="tt-day-btn active-day" onclick="switchUnified(null, 'wd', this)">평일</button>
-          <button class="tt-day-btn" onclick="switchUnified(null, 'we', this)">토요일</button>
-        </div>
-      </div>
-      <div class="tt-pool-info-row" id="ttPoolInfo"></div>
-      <div class="tt-grid" id="ttGrid"></div>
-      <div class="tt-infant-note">
-        <span class="tt-infant-note-icon">👶</span>
-        <div>
-          <strong>유아부 등록 안내</strong>
-          <p>만 3~4세 이상 · 신장 100cm 이상 · 배변 의사 표현이 가능한 아이부터 등록할 수 있어요.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top:16px;">
-      <a href="javascript:void(0)" class="section-inquiry-btn share-btn" onclick="shareTimeTable()" style="font-size:0.85rem; padding:10px 24px;">📤 시간표 이미지 공유</a>
-    </div>
-
-    <!-- 반 구성 -->
-    <div class="section-header reveal" style="margin-top:60px;">
-      <h2 class="section-title" style="font-size:1.8rem;">반 구성, 커리큘럼 안내</h2>
-    </div>
-
-    <div class="class-cards">
-      <div class="class-card reveal">
-        <div class="class-card-img"><img src="images/class/GENERAL.webp" alt="일반부 수업"></div>
-        <div class="class-card-top">
-          <div class="top-row"><span class="emoji">☺️</span><h3>일반부</h3></div>
-          <div class="sub">초등 1학년부터</div>
-        </div>
-        <div class="class-card-body">
-          <div class="ratio">👨‍🏫 1:5 담임제 · 레벨 통합</div>
-          <ul>
-            <li>🤍 자유형 → 💛 배영 → 💚 평영 → 💙 접영</li>
-            <li>💜 잠영 + 사이드 턴</li>
-            <li>🖤 혼영 100m 완주 목표</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="class-card reveal">
-        <div class="class-card-img"><img src="images/class/INFANT.webp" alt="유치부 수업"></div>
-        <div class="class-card-top">
-          <div class="top-row"><span class="emoji">👶</span><h3>유치부</h3></div>
-          <div class="sub">만 3~4세 이상, 신장 100cm 이상</div>
-        </div>
-        <div class="class-card-body">
-          <div class="ratio">👨‍🏫 1:5 담임제 · 레벨 통합</div>
-          <ul>
-            <li>자유형, 배영, 기초 생존수영</li>
-            <li>흥미 위주의 수영</li>
-            <li>아동수영 전문 교육 이수 강사진 배치</li>
-            <li>유아 안전 최우선 슈퍼차일드 노하우</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="class-card reveal">
-        <div class="class-card-img"><img src="images/class/ELITE.webp" alt="엘리트/마스터즈부 수업"></div>
-        <div class="class-card-top">
-          <div class="top-row"><span class="emoji">🏊‍♂️</span><h3>엘리트/마스터즈부</h3></div>
-          <div class="sub">일반부 수료 후 테스트 통과 시</div>
-        </div>
-        <div class="class-card-body">
-          <div class="ratio">🏅 단체 수업</div>
-          <ul>
-            <li>1 대 다수 단체 수업 운영</li>
-            <li>영법 숙달 집중 훈련</li>
-            <li>기록 향상 중심 수업 구성</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-inquiry">
-      <a href="javascript:void(0)" class="section-inquiry-btn discount-btn" onclick="openPrep()">🎒 준비물이 궁금해요</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ PRICING ═══ -->
-<section class="section" id="pricing">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Pricing & Discounts</div>
-      <h2 class="section-title">수강료 · 할인 안내</h2>
-      <p class="section-desc">합리적인 수강료와 다양한 할인 혜택을 확인해 보세요</p>
-    </div>
-
-    <div class="pricing-wrapper">
-      <!-- 일반/유치부 -->
-      <div class="pricing-table-wrap reveal">
-        <div class="pricing-table-header blue">☺️👶 일반부 · 유치부 (1:5 정규반)</div>
-        <table>
-          <thead><tr><th>수업 횟수</th><th>월 수강료</th></tr></thead>
-          <tbody>
-            <tr><td>주 1회</td><td><span class="price-val">150,000원</span></td></tr>
-            <tr><td>주 2회</td><td><span class="price-val">260,000원</span> <span class="price-badge">🔥 추천</span></td></tr>
-            <tr><td>주 3회</td><td><span class="price-val">380,000원</span> <span class="price-badge">🔥 추천</span></td></tr>
-            <tr><td>주 4회</td><td><span class="price-val">460,000원</span></td></tr>
-            <tr><td>주 5회</td><td><span class="price-val">550,000원</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- 엘리트 -->
-      <div class="pricing-table-wrap reveal">
-        <div class="pricing-table-header teal">🏊‍♂️ 엘리트 / 마스터즈부</div>
-        <table>
-          <thead><tr><th>수업 횟수</th><th>월 수강료</th></tr></thead>
-          <tbody>
-            <tr><td>주 1회</td><td><span class="price-val">100,000원</span></td></tr>
-            <tr><td>주 2회</td><td><span class="price-val">160,000원</span></td></tr>
-            <tr><td>주 3회</td><td><span class="price-val">230,000원</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="pricing-tip reveal">
-        <strong>💙 친구 추천 · 형제 할인 혜택이 커요!</strong>
-        지인들, 아이 친구들과 함께 등록하시면 더 큰 할인 혜택을 받으실 수 있어요
-      </div>
-
-      <div class="section-inquiry">
-        <a href="tel:043-715-2019" class="section-inquiry-btn">📞 수강료 문의하기</a>
-        <a href="javascript:void(0)" class="section-inquiry-btn discount-btn" onclick="openDiscount()">🎁 할인 안내</a>
-        <a href="javascript:void(0)" class="section-inquiry-btn share-btn" onclick="sharePricing()">📤 수강료 이미지 공유</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ TRANSPORT ═══ -->
-<section class="section section-alt" id="transport">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Shuttle Service</div>
-      <h2 class="section-title">학원 차량이용 안내</h2>
-      <p class="section-desc">지점별 셔틀 운행 구역을 확인해 주세요</p>
-    </div>
-
-    <div class="transport-grid">
-      <!-- 가경점 -->
-      <div class="transport-card reveal">
-        <h3><span class="dot dot-ga"></span> 가경점</h3>
-        <div class="zone">
-          <div class="zone-label ok">⭕ 차량 가능 구역</div>
-          <div class="zone-tags">
-            <span class="zone-tag ok">가경동</span>
-            <span class="zone-tag ok">복대동</span>
-            <span class="zone-tag ok">개신동</span>
-            <span class="zone-tag ok">성화동</span>
-            <span class="zone-tag ok">비하동</span>
-            <span class="zone-tag ok">강서동</span>
+      <!-- 섹션6 -->
+      <div class="section6 reveal">
+        <img src="assets/section 6/제목 없음-1.png" alt="" class="s6-img">
+        <div class="s6-overlay">
+          <div class="s6-text">
+            <h3 class="s6-title">리얼후기</h3>
+            <p class="s6-desc">네이버 지도 - 슈퍼차일드 가경점, 용암점<br>리뷰에서 발췌</p>
           </div>
+          <img src="assets/section 6/학부모 후기.png" alt="학부모 리얼후기" class="s6-review-img">
         </div>
-        <div class="zone">
-          <div class="zone-label no">❌ 차량 불가 구역</div>
-          <div class="zone-tags">
-            <span class="zone-tag no">봉명동</span>
-            <span class="zone-tag no">모충동</span>
-            <span class="zone-tag no">테크노폴리스</span>
-          </div>
-        </div>
-        <div class="transport-warn">⚠️ 가능 구역 내에서도 아파트 단지 내, 좁은 골목길은 운행이 불가해요</div>
       </div>
 
-      <!-- 용암점 -->
-      <div class="transport-card reveal">
-        <h3><span class="dot dot-yo"></span> 용암점</h3>
-        <div class="zone">
-          <div class="zone-label ok">⭕ 차량 가능 구역</div>
-          <div class="zone-tags">
-            <span class="zone-tag ok">분평동 (일부 제외)</span>
-            <span class="zone-tag ok">방서동</span>
-            <span class="zone-tag ok">동남지구</span>
-            <span class="zone-tag ok">용암동</span>
-            <span class="zone-tag ok">금천동 (일부 제외)</span>
-          </div>
-        </div>
-        <div class="zone">
-          <div class="zone-label no">❌ 차량 불가 구역</div>
-          <div class="zone-tags">
-            <span class="zone-tag no">모충동</span>
-            <span class="zone-tag no">수곡동</span>
-            <span class="zone-tag no">영운동</span>
-            <span class="zone-tag no">석교동</span>
-            <span class="zone-tag no">탑동</span>
-            <span class="zone-tag no">수동</span>
-            <span class="zone-tag no">남일면</span>
-          </div>
-        </div>
-        <div class="transport-warn">⚠️ 분평 1단지 운행 불가 / 금천동 일부 지역 불가 — 문의 부탁드려요<br>⚠️ 아파트 단지 내, 좁은 골목길은 운행이 불가해요</div>
+      <div class="s6-confidence">
+        <img src="assets/section 6/자신감넘치는아이.png" alt="수영이 제일 좋다고 말하는, 자신감 넘치는 아이가 될 수 있어요" class="s6-confidence-img">
       </div>
-    </div>
 
-    <div class="section-inquiry">
-      <a href="tel:043-715-2019" class="section-inquiry-btn">📞 차량 문의하기</a>
+      <!-- 섹션7: 수업시간·반 구성 -->
+      <div class="section7 reveal">
+        <img src="assets/새 폴더/시계.png" alt="" class="s7-clock">
+        <div class="s7-header">
+          <h3 class="s7-title">수업시간·반 구성</h3>
+          <p class="s7-desc">아이의 연령과 수준에 맞는 수업 시간을 확인하세요</p>
+        </div>
+        <div class="s7-tabs" id="s7-tabs">
+          <img src="assets/새 폴더/btn_ga_active.png" alt="가경점" class="s7-tab-btn" id="s7-btn-left" onclick="switchS7('ga')">
+          <img src="assets/새 폴더/btn_ga_inactive.png" alt="용암점" class="s7-tab-btn" id="s7-btn-right" onclick="switchS7('yo')">
+        </div>
+        <div class="s7-panel active" id="s7-panel-ga">
+          <img src="assets/새 폴더/가경점 평일.png" alt="가경점 평일" class="s7-img">
+          <img src="assets/새 폴더/가경점 토요일.png" alt="가경점 토요일" class="s7-img">
+        </div>
+        <div class="s7-panel" id="s7-panel-yo">
+          <img src="assets/새 폴더/용암점 평일.png" alt="용암점 평일" class="s7-img">
+          <img src="assets/새 폴더/용암점 토요일.png" alt="용암점 토요일" class="s7-img">
+        </div>
+        <img src="assets/새 폴더/안내 및 유아부.png" alt="안내 및 유아부 등록" class="s7-img">
+        <div class="s7-classes">
+          <img src="assets/section 7/일반부.png" alt="일반부" class="s7-class-img">
+          <img src="assets/section 7/유아부.png" alt="유아부" class="s7-class-img">
+          <img src="assets/section 7/엘마부.png" alt="엘리트/마스터즈부" class="s7-class-img">
+        </div>
+      </div>
+
+      <!-- 섹션8: 수강료 -->
+      <div class="section8 reveal">
+        <div class="s8-bg"><img src="assets/section 8/계산서.png" alt=""></div>
+        <div class="s8-header">
+          <h3 class="s8-title">수강료 · 할인안내</h3>
+          <p class="s8-desc">합리적인 수강료와 다양한 할인 혜택을 확인해 보세요</p>
+        </div>
+        <img src="assets/section 8/가격표.png" alt="수강료 안내" class="s8-img">
+      </div>
+
+      <!-- 섹션9: 친구추천 이벤트 -->
+      <div class="section9 reveal">
+        <div class="s9-block">
+          <h3 class="s9-title">상시 할인혜택</h3>
+          <p class="s9-desc">혼자보다 함께할 때 더 즐거운 슈퍼차일드</p>
+          <img src="assets/section 8/할인 이벤트.png" alt="상시 할인혜택" class="s9-img">
+        </div>
+        <div class="s9-block">
+          <h3 class="s9-title">친구추천 누적이벤트</h3>
+          <p class="s9-desc">추천한 친구가 많을수록 더 큰 혜택을 드려요</p>
+          <img src="assets/section 8/스탬프이벤트.png" alt="친구추천 누적이벤트" class="s9-img">
+        </div>
+      </div>
+
+      <!-- 섹션10: 셔틀안내 -->
+      <div class="section10 reveal">
+        <h3 class="s10-title">셔틀안내</h3>
+        <p class="s10-desc">지점별 셔틀 운행 구역을 확인해 주세요</p>
+        <img src="assets/section 9/차량 승하차.png" alt="차량 승하차 위치" class="s10-img">
+      </div>
+
     </div>
   </div>
 </section>

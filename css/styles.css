@@ -797,7 +797,7 @@ html {
   margin: 0 -5.5%;
   background: url('../assets/section 5/bg.png') no-repeat center top;
   background-size: cover;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: none;
   border-radius: 0;
   position: relative;
@@ -855,32 +855,22 @@ html {
 .s5-deco-baby {
   width: clamp(60px, 20vw, 120px);
   right: 3%;
-  top: 36%;
-  animation: s5Float1 3s ease-in-out infinite;
-}
-.s5-deco-bubble {
-  width: clamp(35px, 12vw, 70px);
-  right: 8%;
-  top: 53%;
-  animation: s5Float2 2.8s ease-in-out infinite;
+  top: 26%;
 }
 .s5-deco-boy {
   width: clamp(40px, 13vw, 75px);
-  right: 3%;
-  top: 62%;
-  animation: s5Float3 3.2s ease-in-out infinite;
+  right: 40%;
+  top: 44%;
+}
+.s5-deco-bubble {
+  width: clamp(35px, 12vw, 70px);
+  right: 15%;
+  top: 48%;
 }
 .s5-deco-heart {
   width: clamp(25px, 8vw, 45px);
-  right: 8%;
-  top: 55%;
-  animation: s5Float1 2.5s ease-in-out infinite 0.5s;
-}
-.s5-deco-circle {
-  width: clamp(30px, 10vw, 55px);
-  right: 5%;
-  top: 78%;
-  animation: s5Float2 3.5s ease-in-out infinite;
+  left: 60px;
+  top: -1.5em;
 }
 @keyframes s5Float1 {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -895,17 +885,11 @@ html {
   50% { transform: translateY(-7px); }
 }
 
-/* 장식 순차 등장 */
-.s5-deco {
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.section5-steps.visible .s5-deco-baby { opacity: 1; transform: scale(1); transition-delay: 0.3s; }
-.section5-steps.visible .s5-deco-bubble { opacity: 1; transform: scale(1); transition-delay: 0.8s; }
-.section5-steps.visible .s5-deco-boy { opacity: 1; transform: scale(1); transition-delay: 1.0s; }
-.section5-steps.visible .s5-deco-heart { opacity: 1; transform: scale(1); transition-delay: 1.2s; }
-.section5-steps.visible .s5-deco-circle { opacity: 1; transform: scale(1); transition-delay: 1.5s; }
+/* 장식 둥둥 */
+.s5-deco-baby { animation: s5Float1 3s ease-in-out infinite; }
+.s5-deco-bubble { animation: s5Float2 2.8s ease-in-out infinite; }
+.s5-deco-boy { animation: s5Float3 3.2s ease-in-out infinite; }
+.s5-deco-heart { animation: s5Float1 2.5s ease-in-out 0.5s infinite; }
 
 /* 섹션5 애니메이션 */
 .s5-title {
@@ -928,6 +912,262 @@ html {
 .section5-steps.visible .s5-step {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 섹션6 */
+.section6 {
+  padding: 0;
+  margin: 0 -5.5%;
+  box-shadow: none;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+.s6-img {
+  width: 100%;
+  display: block;
+}
+.s6-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.s6-text {
+  padding: 8% 5.5%;
+}
+.s6-title {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 300;
+  font-size: 5vw;
+  color: #fff;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px;
+}
+.s6-desc {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 300;
+  font-size: 1.9vw;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: -0.03em;
+  line-height: 1.5;
+}
+
+.s6-review-img {
+  position: absolute;
+  right: 3%;
+  bottom: 5%;
+  width: 55%;
+}
+
+/* 섹션7: 수업시간·반 구성 */
+.section7 {
+  padding: 40px 0 40px;
+  background: #fff;
+  margin: 0 -5.5%;
+  position: relative;
+  overflow: hidden;
+}
+.s7-clock {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.s7-header {
+  padding: 0 5.5% 20px;
+  position: relative;
+  z-index: 1;
+}
+.s7-title {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-size: 9vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  margin-bottom: 6px;
+  max-width: 97%;
+}
+.s7-desc {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 300;
+  font-size: 3.5vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  max-width: 97%;
+}
+.s7-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+.s7-tab-btn {
+  width: 50%;
+  display: block;
+  cursor: pointer;
+}
+.s7-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+.s7-panel { display: none; position: relative; z-index: 1; }
+.s7-classes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 30px 0;
+}
+.s7-class-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 45px;
+}
+.s7-class-img:nth-child(1) {
+  margin-bottom: 15px;
+}
+.s7-class-img:last-child {
+  margin-bottom: 0;
+}
+.s7-panel.active { display: block; }
+
+/* 섹션8: 수강료 */
+.section8 {
+  position: relative;
+  padding: 40px 0;
+  overflow: visible;
+  margin-top: 80px;
+}
+.s8-bg {
+  position: absolute;
+  right: 0;
+  top: -7%;
+  z-index: 0;
+  pointer-events: none;
+  width: 40%;
+}
+.s8-bg img {
+  width: 100%;
+  display: block;
+}
+.s8-header {
+  padding: 0 5.5% 20px;
+  position: relative;
+  z-index: 1;
+}
+.s8-title {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-size: 9vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  margin-bottom: 6px;
+  max-width: 97%;
+}
+.s8-desc {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 300;
+  font-size: 3.5vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  max-width: 97%;
+}
+.s8-img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.s6-confidence {
+  margin: 0;
+  padding: 7.5px 5.5% 0;
+}
+.s6-confidence-img {
+  width: 100%;
+  display: block;
+}
+
+/* 섹션9: 친구추천 이벤트 */
+.section9 {
+  background: #eaeef0;
+  padding: 40px 5.5%;
+  margin: 60px -5.5% 0;
+}
+.s9-block {
+  margin-bottom: 50px;
+}
+.s9-block:last-child {
+  margin-bottom: 0;
+}
+.s9-title {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-size: 9vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  margin-bottom: 6px;
+  max-width: 97%;
+}
+.s9-desc {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 300;
+  font-size: 3.5vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  max-width: 97%;
+  margin-bottom: 20px;
+}
+.s9-img {
+  width: 100%;
+  display: block;
+}
+
+/* 섹션10: 셔틀안내 */
+.section10 {
+  padding: 40px 5.5%;
+}
+.s10-title {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-size: 9vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  margin-bottom: 6px;
+  max-width: 97%;
+}
+.s10-desc {
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-weight: 300;
+  font-size: 3.5vw;
+  letter-spacing: -0.05em;
+  color: #232426;
+  max-width: 97%;
+  margin-bottom: 20px;
+}
+.s10-img {
+  width: 100%;
+  display: block;
+}
+
+/* 섹션5~8 데스크탑 폰트 제한 */
+@media (min-width: 769px) {
+  .s6-title { font-size: 24px; }
+  .s6-desc { font-size: 12px; }
+  .section5-steps { background-position: center -150px; }
+  .s9-title { font-size: 32px; }
+  .s9-desc { font-size: 14px; }
+  .s10-title { font-size: 32px; }
+  .s10-desc { font-size: 14px; }
+  .s5-title { font-size: 24px; }
+  .s5-step-title { font-size: 28px; }
+  .s5-step-desc { font-size: 14px; }
+  .s7-title { font-size: 32px; }
+  .s7-desc { font-size: 14px; }
+  .s8-title { font-size: 32px; }
+  .s8-desc { font-size: 14px; }
 }
 
 /* avoid */

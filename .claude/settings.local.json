@@ -25,7 +25,9 @@
       "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:1600:0:800\" empathy_full.png)",
       "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:800:0:2250\" section2_top.png)",
       "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:1800:0:3600\" section3.png)",
-      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:2500:0:10500\" step_section.png)"
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/sclanding.png\" -vf \"crop=1500:2500:0:10500\" step_section.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/assets/새 폴더/섹션 7 시간표.png\" -vf \"crop=iw:ih/2:0:0\" s7_top.png)",
+      "Bash(ffmpeg -y -i \"/c/SC LANDING/assets/새 폴더/섹션 7 시간표.png\" -vf \"crop=iw:ih/2:0:ih/2\" s7_bottom.png)"
     ]
   }
 }

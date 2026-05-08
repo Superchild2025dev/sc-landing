@@ -290,6 +290,21 @@ function syncAlbumTabs(branch) {
 }
 
 
+/* ─── 섹션7 시간표 탭 ─── */
+function switchS7(branch) {
+  document.querySelectorAll('.s7-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('s7-panel-' + branch).classList.add('active');
+  var left = document.getElementById('s7-btn-left');
+  var right = document.getElementById('s7-btn-right');
+  if (branch === 'ga') {
+    left.src = 'assets/새 폴더/btn_ga_active.png';
+    right.src = 'assets/새 폴더/btn_ga_inactive.png';
+  } else {
+    left.src = 'assets/새 폴더/btn_yo_inactive.png';
+    right.src = 'assets/새 폴더/btn_yo_active.png';
+  }
+}
+
 /* ─── TIMETABLE IMAGE SHARE ─── */
 async function shareTimeTable() {
   const el = document.querySelector('.timetable-unified');
