@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ─── NAV ─── */
 function initNav() {
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('[id="about"], [id="schedule"], [id="pricing"], [id="transport"], [id="facility"]');
   const navLinks = document.querySelectorAll('.nav-links a');
   const navLinksContainer = document.getElementById('navLinks');
   const navWrap = document.getElementById('navLinksWrap');
@@ -289,6 +289,14 @@ function syncAlbumTabs(branch) {
   document.getElementById('album-' + branch)?.classList.add('active');
 }
 
+
+/* ─── 시설 탭 ─── */
+function switchFacility(branch, btn) {
+  document.querySelectorAll('.sf-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.sf-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sf-' + branch).classList.add('active');
+}
 
 /* ─── 섹션7 시간표 탭 ─── */
 function switchS7(branch) {

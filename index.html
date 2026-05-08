@@ -197,7 +197,7 @@
       </div>
 
       <!-- 섹션7: 수업시간·반 구성 -->
-      <div class="section7 reveal">
+      <div class="section7 reveal" id="schedule">
         <img src="assets/새 폴더/시계.png" alt="" class="s7-clock">
         <div class="s7-header">
           <h3 class="s7-title">수업시간·반 구성</h3>
@@ -224,7 +224,7 @@
       </div>
 
       <!-- 섹션8: 수강료 -->
-      <div class="section8 reveal">
+      <div class="section8 reveal" id="pricing">
         <div class="s8-bg"><img src="assets/section 8/계산서.png" alt=""></div>
         <div class="s8-header">
           <h3 class="s8-title">수강료 · 할인안내</h3>
@@ -248,7 +248,7 @@
       </div>
 
       <!-- 섹션10: 셔틀안내 -->
-      <div class="section10 reveal">
+      <div class="section10 reveal" id="transport">
         <h3 class="s10-title">셔틀안내</h3>
         <p class="s10-desc">지점별 셔틀 운행 구역을 확인해 주세요</p>
         <img src="assets/section 9/차량 승하차.png" alt="차량 승하차 위치" class="s10-img">
@@ -259,139 +259,75 @@
 </section>
 
 
-<!-- ═══ FACILITY · PARKING · LOCATION (지점별 앨범) ═══ -->
-<section class="section" id="facility">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">Our Facilities</div>
-      <h2 class="section-title">시설 · 주차 · 위치 안내</h2>
-      <div class="facility-badges">
-        <span class="facility-badge">📹 수업 CCTV 실시간 시청</span>
-        <span class="facility-badge">☕ 카페테리아</span>
-        <span class="facility-badge">🪟 통유리 대기공간</span>
-        <span class="facility-badge">🌊 친환경 해수풀</span>
-        <span class="facility-badge">💧 24시간 물 순환</span>
-        <span class="facility-badge">🌡️ 계절에 맞는 따뜻한 수온</span>
-        <span class="facility-badge">🚐 차량 셔틀 운영</span>
-      </div>
+<!-- ═══ 시설 · 주차 · 위치 ═══ -->
+<section class="section-facility" id="facility">
+  <div class="sf-inner">
+    <h3 class="sf-title">시설 · 주차 · 위치 안내</h3>
+    <p class="sf-desc">안전하고 쾌적한 슈퍼차일드의 시설과 오시는 길을 안내해요</p>
+
+    <div class="sf-badges">
+      <span class="sf-badge">수업 CCTV 실시간 시청</span>
+      <span class="sf-badge">카페테리아</span>
+      <span class="sf-badge">통유리 대기공간</span>
+      <span class="sf-badge">친환경 해수풀</span>
+      <span class="sf-badge">24시간 물 순환</span>
+      <span class="sf-badge">계절에 맞는 따뜻한 수온</span>
+      <span class="sf-badge">차량 셔틀 운영</span>
     </div>
 
     <!-- 지점 탭 -->
-    <div class="album-tabs reveal">
-      <button class="album-tab active" onclick="switchAlbum('ga', this)"><span class="dot dot-ga"></span> 가경점</button>
-      <button class="album-tab" onclick="switchAlbum('yo', this)"><span class="dot dot-yo"></span> 용암점</button>
+    <div class="sf-tabs">
+      <button class="sf-tab active" onclick="switchFacility('ga', this)">가경점</button>
+      <button class="sf-tab" onclick="switchFacility('yo', this)">용암점</button>
     </div>
 
-    <!-- ── 가경점 ── -->
-    <div class="album-panel active" id="album-ga">
-      <div class="album-grid">
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/ga/pool.webp" alt="가경점 수영장"></div>
-          <div class="album-caption"><h4>수영장</h4><p>친환경 해수풀, 24시간 물 순환, 쾌적한 수온 관리가 이루어지고 있어요</p></div>
+    <!-- 가경점 -->
+    <div class="sf-panel active" id="sf-ga">
+      <div class="sf-grid">
+        <div class="sf-card"><img src="images/facility/ga/pool.webp" alt="수영장"><span>수영장</span></div>
+        <div class="sf-card"><img src="images/facility/ga/shower.webp" alt="샤워실"><span>샤워실</span></div>
+        <div class="sf-card"><img src="images/facility/ga/locker.webp" alt="탈의실"><span>탈의실</span></div>
+        <div class="sf-card"><img src="images/facility/ga/dry.webp" alt="드라이존"><span>드라이존</span></div>
+        <div class="sf-card"><img src="images/facility/ga/lobby.webp" alt="대기공간"><span>대기공간</span></div>
+      </div>
+      <div class="sf-info">
+        <div class="sf-info-block">
+          <h4>오시는 길</h4>
+          <p>충북 청주시 흥덕구 장구봉로 68<br>태암수정아파트 상가 지하 1층</p>
+          <p> 043-715-2019</p>
+          <p> 평일 14:00~21:00 · 토 09:00~15:00</p>
+          <a href="https://naver.me/5xjVSB3Z" target="_blank" class="sf-map-btn">네이버 지도로 보기</a>
         </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/ga/shower.webp" alt="가경점 샤워실"></div>
-          <div class="album-caption"><h4>샤워실</h4><p>아이들 맞춤 설계로 편하게 이용할 수 있어요</p></div>
-        </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/ga/locker.webp" alt="가경점 탈의실"></div>
-          <div class="album-caption"><h4>탈의실</h4><p>환복, 로션까지 꼼꼼하게 챙겨드려요</p></div>
-        </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/ga/dry.webp" alt="가경점 드라이존"></div>
-          <div class="album-caption"><h4>드라이존</h4><p>마무리까지 확실하게 마치고 나올 수 있어요</p></div>
-        </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/ga/lobby.webp" alt="가경점 대기공간"></div>
-          <div class="album-caption"><h4>대기공간</h4><p>아이가 수영하는 걸 보며 편하게 대기할 수 있어요</p></div>
+        <div class="sf-info-block">
+          <h4>주차 안내</h4>
+          <p>상가 내 <strong>무료 주차</strong> 가능</p>
+          <p>옆 아파트 단지 노상주차 가능</p>
         </div>
       </div>
     </div>
 
-    <!-- ── 용암점 ── -->
-    <div class="album-panel" id="album-yo">
-      <div class="album-grid">
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/yo/pool.webp" alt="용암점 수영장"></div>
-          <div class="album-caption"><h4>수영장</h4><p>친환경 해수풀, 24시간 물 순환, 쾌적한 수온 관리가 이루어지고 있어요</p></div>
+    <!-- 용암점 -->
+    <div class="sf-panel" id="sf-yo">
+      <div class="sf-grid">
+        <div class="sf-card"><img src="images/facility/yo/pool.webp" alt="수영장"><span>수영장</span></div>
+        <div class="sf-card"><img src="images/facility/yo/shower.webp" alt="샤워실"><span>샤워실</span></div>
+        <div class="sf-card"><img src="images/facility/yo/locker.webp" alt="탈의실"><span>탈의실</span></div>
+        <div class="sf-card"><img src="images/facility/yo/dry.webp" alt="드라이존"><span>드라이존</span></div>
+        <div class="sf-card"><img src="images/facility/yo/lobby.webp" alt="대기공간"><span>대기공간</span></div>
+      </div>
+      <div class="sf-info">
+        <div class="sf-info-block">
+          <h4>오시는 길</h4>
+          <p>충북 청주시 상당구 원봉로<br>소라아파트 상가 지하 1층</p>
+          <p> 043-288-2016</p>
+          <p> 평일 14:00~21:00 · 토 13:00~15:00</p>
+          <a href="https://naver.me/5vc8CjoA" target="_blank" class="sf-map-btn">네이버 지도로 보기</a>
         </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/yo/shower.webp" alt="용암점 샤워실"></div>
-          <div class="album-caption"><h4>샤워실</h4><p>아이들 맞춤 설계로 편하게 이용할 수 있어요</p></div>
-        </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/yo/locker.webp" alt="용암점 탈의실"></div>
-          <div class="album-caption"><h4>탈의실</h4><p>환복, 로션까지 꼼꼼하게 챙겨드려요</p></div>
-        </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/yo/dry.webp" alt="용암점 드라이존"></div>
-          <div class="album-caption"><h4>드라이존</h4><p>마무리까지 확실하게 마치고 나올 수 있어요</p></div>
-        </div>
-        <div class="album-card">
-          <div class="album-img"><img src="images/facility/yo/lobby.webp" alt="용암점 대기공간"></div>
-          <div class="album-caption"><h4>대기공간</h4><p>아이가 수영하는 걸 보며 편하게 대기할 수 있어요</p></div>
+        <div class="sf-info-block">
+          <h4>주차 안내</h4>
+          <p>상가, 아파트 내 <strong>무료 주차</strong> 가능</p>
         </div>
       </div>
-    </div>
-
-    <!-- ── 오시는 길 + 주차 (지점 토글 연동) ── -->
-    <div class="sub-section-header reveal" style="margin-top:40px;">
-      <h3>📍 오시는 길</h3>
-    </div>
-
-    <div class="album-tabs reveal" id="infoTabs">
-      <button class="album-tab active" onclick="switchInfo('ga', this)"><span class="dot dot-ga"></span> 슈퍼차일드 가경점</button>
-      <button class="album-tab" onclick="switchInfo('yo', this)"><span class="dot dot-yo"></span> 슈퍼차일드 용암점</button>
-    </div>
-
-    <div class="info-panel active" id="info-ga">
-      <div class="album-info-row">
-        <div class="album-info-card album-info-location">
-          <h4>📍 가경점</h4>
-          <div class="album-info-item"><span>🏠</span> 충북 청주시 흥덕구 장구봉로 68<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;태암수정아파트 상가 지하 1층</div>
-          <div class="album-info-item"><span>📞</span> 043-715-2019</div>
-          <div class="album-info-item"><span>🕐</span> 평일 14:00~21:00 · 토 09:00~15:00</div>
-          <a href="https://naver.me/5xjVSB3Z" target="_blank" class="loc-btn">🗺️ 네이버 지도로 보기</a>
-        </div>
-        <div class="album-info-card">
-          <h4>🅿️ 주차 안내</h4>
-          <div class="album-info-item"><span>🚗</span> 상가 내 <strong>무료 주차</strong> 가능</div>
-          <div class="album-info-item"><span>🅿️</span> 옆 아파트 단지 노상주차 가능</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="info-panel" id="info-yo">
-      <div class="album-info-row">
-        <div class="album-info-card album-info-location">
-          <h4>📍 용암점</h4>
-          <div class="album-info-item"><span>🏠</span> 충북 청주시 상당구 원봉로<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소라아파트 상가 지하 1층</div>
-          <div class="album-info-item"><span>📞</span> 043-288-2016</div>
-          <div class="album-info-item"><span>🕐</span> 평일 14:00~21:00 · 토 13:00~15:00</div>
-          <a href="https://naver.me/5vc8CjoA" target="_blank" class="loc-btn">🗺️ 네이버 지도로 보기</a>
-        </div>
-        <div class="album-info-card">
-          <h4>🅿️ 주차 안내</h4>
-          <div class="album-info-item"><span>🚗</span> 상가, 아파트 내 <strong>무료 주차</strong> 가능</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-inquiry">
-      <a href="tel:043-715-2019" class="section-inquiry-btn">📞 시설 문의하기</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ CTA ═══ -->
-<section class="cta-section">
-  <div class="section-inner reveal">
-    <h2>아이에게 자신감을 선물하세요!</h2>
-    <p>입회, 상담 신청하기</p>
-    <div class="cta-btns">
-      <a href="#" class="btn btn-primary" onclick="openModal(); return false;">무료 체험수업 신청하기</a>
-      <a href="tel:043-715-2019" class="btn btn-outline">📞 전화 상담하기</a>
     </div>
   </div>
 </section>
