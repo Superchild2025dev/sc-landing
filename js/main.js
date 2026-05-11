@@ -607,16 +607,34 @@ function submitForm() {
   const gender = document.querySelector('input[name="gender"]:checked');
   const age = document.getElementById('childAge').value;
   const phone = document.getElementById('parentPhone').value.trim();
-  const time = document.querySelector('input[name="timeSlot"]:checked');
+  const timeSlots = document.querySelectorAll('input[name="timeSlot"]:checked');
+  const memo = document.getElementById('memo').value.trim();
+  const regType = document.querySelector('input[name="regType"]:checked');
 
   if (!branch) return alert('지점을 선택해 주세요.');
   if (!name)   return alert('아이 이름을 입력해 주세요.');
   if (!gender) return alert('성별을 선택해 주세요.');
   if (!age)    return alert('나이를 선택해 주세요.');
   if (!phone || phone.replace(/\D/g, '').length < 10) return alert('보호자 핸드폰 번호를 정확히 입력해 주세요.');
-  if (!time)   return alert('샘플수업 시간대를 선택해 주세요.');
+  if (!timeSlots.length) return alert('샘플수업 시간대를 선택해 주세요.');
 
-  // Show success
+  var times = [];
+  timeSlots.forEach(function(t) { times.push(t.value); });
+
+  fetch('https://script.google.com/macros/s/AKfycby45KyPgQLPp897vpPFueY6DlC-rEbkYv8gIDL4sFaB-zUb7z_73i736ypktfOpbAkY/exec', {
+    method: 'POST',
+    body: JSON.stringify({
+      regType: regType ? regType.value : '',
+      branch: branch.value,
+      childName: name,
+      gender: gender.value,
+      childAge: age + '세',
+      parentPhone: phone,
+      timeSlot: times.join(', '),
+      memo: memo
+    })
+  }).catch(function() {});
+
   document.getElementById('modalForm').style.display = 'none';
   document.getElementById('modalSuccess').classList.add('show');
 }
