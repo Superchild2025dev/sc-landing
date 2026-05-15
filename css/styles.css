@@ -29,6 +29,10 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: 56px; }
 
+a, button, label, select, input, textarea, .s7-tab-btn, .sf-card {
+  touch-action: manipulation;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: var(--gray-900);
@@ -113,9 +117,10 @@ body {
 
   .nav-links {
     display: flex !important; flex-direction: row !important;
-    padding: 0 !important; gap: 0 !important;
+    padding: 0 36px !important; gap: 0 !important;
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-padding: 36px;
   }
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a {
@@ -138,6 +143,7 @@ body {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 .hero-overlay {
   position: absolute; inset: 0;
@@ -147,6 +153,7 @@ body {
     rgba(20,40,100,0.35) 50%,
     rgba(20,40,100,0.6) 100%
   );
+  pointer-events: none;
 }
 .hero-content {
   position: relative; z-index: 3;
@@ -158,6 +165,32 @@ body {
   max-width: 100%;
   margin: 0 auto 40px;
   animation: fadeInDown 0.8s ease-out both;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--blue-deep);
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-cta::after {
+  content: '↓';
+  margin-left: 8px;
+  font-size: 0.95em;
+}
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.28);
 }
 
 
@@ -337,6 +370,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   animation: empFloat 3s ease-in-out infinite;
+  pointer-events: none;
 }
 .emp-char-2 {
   position: absolute;
@@ -347,6 +381,7 @@ body {
   object-fit: cover;
   animation: empFloat 3s ease-in-out infinite;
   animation-delay: 1.5s;
+  pointer-events: none;
 }
 @keyframes empFloat {
   0%, 100% { transform: translateY(0); }
@@ -481,6 +516,7 @@ body {
 .s3-float {
   position: absolute;
   z-index: 2;
+  pointer-events: none;
 }
 .s3-badge {
   width: clamp(28px, 6vw, 50px);
@@ -610,6 +646,7 @@ body {
   position: absolute;
   width: clamp(80px, 25vw, 180px);
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+  pointer-events: none;
 }
 .s4-b1 { left: 2%; top: 5%; }
 .s4-b2 { right: 2%; top: 15%; }
@@ -928,6 +965,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
+  pointer-events: none;
 }
 .s6-text {
   padding: 5% 10.5%;
@@ -1251,6 +1289,7 @@ body {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 .sf-card img {
   width: 100%;
@@ -1328,6 +1367,24 @@ body {
   font-size: 0.82rem;
 }
 .footer strong { color: rgba(255,255,255,0.7); }
+.footer-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin-top: 18px;
+  padding: 0 20px;
+  border: 1px solid rgba(255,255,255,0.24);
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.footer-home-btn::after {
+  content: '↗';
+  margin-left: 6px;
+  font-size: 0.9em;
+}
 
 
 /* ─── FAB (Floating Action Button) ─── */
@@ -2018,6 +2075,45 @@ body {
   transform: scale(1) rotate(0deg);
 }
 
+@media (max-width: 768px) {
+  .hero-text-img,
+  .hero-video,
+  .emp-char-1,
+  .emp-char-2,
+  .s3-float,
+  .s4-learn-img,
+  .section4-why.visible .s4-b1,
+  .section4-why.visible .s4-b2,
+  .section4-why.visible .s4-b3,
+  .section4-why.visible .s4-b4,
+  .section4-why.visible .s4-b5,
+  .s5-deco {
+    animation: none !important;
+  }
+
+  .fab-main .pulse {
+    display: none;
+  }
+
+  .modal-overlay,
+  .discount-overlay {
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 768px) {
@@ -2028,6 +2124,11 @@ body {
     padding: 60px 20px 80px;
   }
   .hero-text-img { max-width: 90%; }
+  .hero-cta {
+    min-height: 48px;
+    padding: 0 24px;
+    font-size: 0.95rem;
+  }
 
   .fab { bottom: 20px; right: 20px; }
 

@@ -22,6 +22,7 @@ function initNav() {
   let lastActiveId = '';
   let isClicking = false;
   let scrollEndTimer = null;
+  let navRaf = null;
 
   // Click: instant highlight, lock during scroll
   navLinks.forEach(link => {
@@ -37,13 +38,8 @@ function initNav() {
     window.addEventListener(evt, () => { isClicking = false; }, { passive: true });
   });
 
-  window.addEventListener('scroll', () => {
-    if (isClicking) {
-      clearTimeout(scrollEndTimer);
-      scrollEndTimer = setTimeout(() => { isClicking = false; }, 50);
-      return;
-    }
-
+  const updateActiveNav = () => {
+    navRaf = null;
     let current = '';
     sections.forEach(s => {
       if (window.scrollY >= s.offsetTop - 60) current = s.getAttribute('id');
@@ -64,12 +60,22 @@ function initNav() {
         if (linkLeft < containerScroll || linkLeft + linkWidth > containerScroll + containerWidth) {
           navLinksContainer.scrollTo({
             left: linkLeft - (containerWidth / 2) + (linkWidth / 2),
-            behavior: 'instant',
+            behavior: 'auto',
           });
         }
       }
     }
-  });
+  };
+
+  window.addEventListener('scroll', () => {
+    if (isClicking) {
+      clearTimeout(scrollEndTimer);
+      scrollEndTimer = setTimeout(() => { isClicking = false; }, 80);
+      return;
+    }
+    if (navRaf) return;
+    navRaf = requestAnimationFrame(updateActiveNav);
+  }, { passive: true });
 
   // Nav scroll arrows
   if (navLinksContainer && navWrap) {
@@ -200,6 +206,22 @@ function initLightbox() {
       return;
     }
 
+    // 시설 사진 클릭
+    const facilityCard = e.target.closest('.sf-card');
+    if (facilityCard) {
+      const facilityImg = facilityCard.querySelector('img');
+      const panel = facilityCard.closest('.sf-panel');
+      if (panel) {
+        _lbImages = [...panel.querySelectorAll('.sf-card img')].map(img => ({
+          src: img.src,
+          alt: img.alt,
+        }));
+        _lbIndex = _lbImages.findIndex(i => i.src === facilityImg.src);
+        openLightbox();
+      }
+      return;
+    }
+
     // 변화 갤러리 이미지 클릭
     const changeImg = e.target.closest('.change-gallery img');
     if (changeImg) {
@@ -315,10 +337,28 @@ function switchS7(branch) {
   }
 }
 
+let html2CanvasPromise = null;
+
+function ensureHtml2Canvas() {
+  if (window.html2canvas) return Promise.resolve(window.html2canvas);
+  if (html2CanvasPromise) return html2CanvasPromise;
+
+  html2CanvasPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    script.async = true;
+    script.onload = () => resolve(window.html2canvas);
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+
+  return html2CanvasPromise;
+}
+
 /* ─── TIMETABLE IMAGE SHARE ─── */
 async function shareTimeTable() {
   const el = document.querySelector('.timetable-unified');
-  if (!el || typeof html2canvas === 'undefined') return;
+  if (!el) return;
 
   // 캡쳐 중 표시
   const btn = event.target.closest('a');
@@ -327,7 +367,8 @@ async function shareTimeTable() {
   btn.style.pointerEvents = 'none';
 
   try {
-    const canvas = await html2canvas(el, {
+    const capture = await ensureHtml2Canvas();
+    const canvas = await capture(el, {
       scale: 2,
       backgroundColor: '#ffffff',
       useCORS: true,
@@ -366,7 +407,7 @@ async function shareTimeTable() {
 /* ─── PRICING IMAGE SHARE ─── */
 async function sharePricing() {
   const el = document.querySelector('.pricing-wrapper');
-  if (!el || typeof html2canvas === 'undefined') return;
+  if (!el) return;
 
   const btn = event.target.closest('a');
   const origText = btn.textContent;
@@ -374,7 +415,8 @@ async function sharePricing() {
   btn.style.pointerEvents = 'none';
 
   try {
-    const canvas = await html2canvas(el, {
+    const capture = await ensureHtml2Canvas();
+    const canvas = await capture(el, {
       scale: 2,
       backgroundColor: '#ffffff',
       useCORS: true,

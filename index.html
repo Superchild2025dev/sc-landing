@@ -17,21 +17,20 @@
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<!-- html2canvas (시간표 이미지 저장) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="stylesheet" href="css/styles.css?v=20260515">
 </head>
 <body>
 
 <!-- ═══ HERO (MP4 배경) ═══ -->
 <section class="hero" id="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata">
     <source src="assets/hero/hero-bg.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <img src="assets/hero/hero-text.png" alt="청주 1등 수영장 슈퍼차일드 - 아이에게 자신감을 선물해 주세요" class="hero-text-img">
+    <img src="assets/hero/hero-text.png" alt="청주 1등 수영장 슈퍼차일드 - 아이에게 자신감을 선물해 주세요" class="hero-text-img" fetchpriority="high" decoding="async">
+    <a href="#about" class="hero-cta">슈퍼차일드 알아보기</a>
   </div>
 </section>
 
@@ -348,6 +347,7 @@
 <!-- ═══ FOOTER ═══ -->
 <footer class="footer">
   <p><strong>슈퍼차일드</strong> &nbsp;|&nbsp; 가경점 · 용암점</p>
+  <a href="https://superchild.kr" target="_blank" rel="noopener" class="footer-home-btn">슈퍼차일드 홈페이지 바로가기</a>
   <p style="margin-top:6px;">© 2026 SUPER CHILD. All rights reserved.</p>
 </footer>
 
@@ -569,7 +569,7 @@
 </div>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+<script src="js/data.js?v=20260515"></script>
+<script src="js/main.js?v=20260515"></script>
 </body>
 </html>
